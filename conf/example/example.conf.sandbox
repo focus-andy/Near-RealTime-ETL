@@ -1,0 +1,5 @@
+minute_partition: 10
+pipe_name: iknow-submit-log-new-test
+token: MhxzKhl
+peek_time_ms: 200
+
