@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Near-realtime-etl : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Near-realtime-etl</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/focus-andy/Near-RealTime-ETL">View on GitHub</a>
+
+          <h1 id="project_title">Near-realtime-etl</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/focus-andy/Near-RealTime-ETL/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/focus-andy/Near-RealTime-ETL/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="near-realtime-etl-framework" class="anchor" href="#near-realtime-etl-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Near RealTime ETL framework</h1>
+
+<p>The Near RealTime-ETL is a framework. With it Developers can create Real-time ETL applications which are the real ETL programmes running on servers. And this is the only right way to use the framework, because the framework itself doesn't provide any functional services.
+The framework is designed to be able to extract-transform-load data in minute level, the most frequent cycle is one minute, which means it costs around one minute from the generation of the data on servers until it is ready to be used in the data warehouse. </p>
+
+<h1>
+<a id="data-flow" class="anchor" href="#data-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Flow</h1>
+
+<p>The applications of the Near Realtime ETL framework lay between the realtime pipe applications, such as Kafka, and the Data Warehouse constructed by HIVE and Hadoop. <br>
+First, the data from pipe as the source flow to the Near Realtime Apps<br>
+Then, the Near Realtime Apps process the input data into the target format and store them on HDFS<br> 
+In the end, create partitions. At this moment, the data are ready for use.</p>
+
+<h1>
+<a id="design-thinking" class="anchor" href="#design-thinking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Design Thinking</h1>
+
+<ol>
+<li>Flexibility
+Flexibility is put at the top priority in the design process. Because framework itself is a kind of limitation. Everything is set within the framework so that the whole process can run well. But the new technologies, as the new lucky dogs, always make us to break the limitations if we need to upgrade some parts of the framework.
+So the design thinking is that one modul has only one function. The whole framework is constructed with required moduls by a schedule programme. The schedule programme actually controls how the data flow through the moduls within the framework. If some modifications are needed because of upgrading or adjusting to new technologies, just add or modify relavent moduls. The apps of the framework can still run well with the new moduls.<br>
+Currently, the framework has some moduls as bellow:<br> 
+Subscriber Modul, extract data from pipe.
+Data Process Modul, process one piece of data.
+Uploading Modul, upload data to HDFS
+Partition Modul, update partition information.
+Schedule Modul, as the main function programme organise all required modules
+Log Modul, print logs.</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Near-realtime-etl maintained by <a href="https://github.com/focus-andy">focus-andy</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
