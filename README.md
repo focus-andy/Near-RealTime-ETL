@@ -1,6 +1,6 @@
 # Near RealTime ETL framework
 The Near RealTime-ETL is a framework. With it Developers can create Near Real-time ETL applications which are the real programmes to extract,transform and load data. And this is the only right way to use the framework, because the framework itself doesn't provide any functional services.<br /><br />
-The framework is designed to be able to extract-transform-load data in minute level, the most rapid cycle is one minute, which means it costs one minute from the generation of the data on servers until the data is ready to be used in the data warehouse.<br /><br /><br />
+The framework is designed to be able to extract-transform-load data in minute level, the most rapid cycle is one minute, which means it costs one minute from the generation of the data on servers until the data is ready to be used in the data warehouse.<br /><br />
 
 # Data Flow
 The applications of the Near Realtime ETL framework lay between the realtime pipe applications, such as Kafka, and the Data Warehouse constructed by HIVE and Hadoop. <br />
